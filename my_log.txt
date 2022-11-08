@@ -11,3 +11,11 @@ Laravel 9 и Vue 3 SPA интернет магазин
         php artisan migrate
         php artisan migrate:rollback
 
+        #показать ключ
+        ssh-agent sh -c 'ssh-add; ssh-add -L'
+
+4. Установка AdminLTE для laravel (через composer и) вручную
+
+    php artisan make:controller AdminController
+
+5. Оформляем adminlte, иконки. Создаем layout и имена
