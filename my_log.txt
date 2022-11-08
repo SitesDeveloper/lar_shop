@@ -1,0 +1,13 @@
+Laravel 9 и Vue 3 SPA интернет магазин
+
+3. Разворачиваем проект интернет магазин в docker
+    1) docker-compose.yml   + папка _docker
+
+    docker-compose up -d
+    sudo chmod 777 -R storage
+
+    docker exec -it shop_app bash
+
+        php artisan migrate
+        php artisan migrate:rollback
+
