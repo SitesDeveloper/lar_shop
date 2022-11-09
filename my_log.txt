@@ -75,3 +75,6 @@ Laravel 9 и Vue 3 SPA интернет магазин
     php artisan migrate
     exit
     view crud
+
+
+7. CRUD по пользователям
