@@ -19,3 +19,5 @@ Laravel 9 и Vue 3 SPA интернет магазин
     php artisan make:controller AdminController
 
 5. Оформляем adminlte, иконки. Создаем layout и имена
+
+6. CRUD по категориям, тегам и цветам с интерфейсом
