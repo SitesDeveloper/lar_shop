@@ -21,3 +21,16 @@ Laravel 9 и Vue 3 SPA интернет магазин
 5. Оформляем adminlte, иконки. Создаем layout и имена
 
 6. CRUD по категориям, тегам и цветам с интерфейсом
+    php artisan make:model Category -m
+    php artisan make:controller Category/IndexController
+    php artisan make:controller Category/ShowController
+    php artisan make:controller Category/EditController --invokable
+    php artisan make:controller Category/DeleteController --invokable
+    php artisan make:controller Category/UpdateController --invokable
+    php artisan make:controller Category/CreateController --invokable
+    php artisan make:controller Category/StoreController --invokable
+
+    php artisan make:request Category/StoreRequest
+    php artisan make:request Category/UpdateRequest
+
+    /view/ crud
