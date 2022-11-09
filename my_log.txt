@@ -54,5 +54,24 @@ Laravel 9 и Vue 3 SPA интернет магазин
     docker exec -it shop_app bash
     php artisan migrate
     exit
+    view/ crud
 
 
+
+    #colors
+
+    php artisan make:model Color -m
+    php artisan make:controller Color/IndexController --invokable
+    php artisan make:controller Color/ShowController --invokable
+    php artisan make:controller Color/EditController --invokable
+    php artisan make:controller Color/DeleteController --invokable
+    php artisan make:controller Color/UpdateController --invokable
+    php artisan make:controller Color/CreateController --invokable
+    php artisan make:controller Color/StoreController --invokable
+
+    php artisan make:request Color/StoreRequest
+    php artisan make:request Color/UpdateRequest
+    docker exec -it shop_app bash
+    php artisan migrate
+    exit
+    view crud
