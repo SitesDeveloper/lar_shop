@@ -43,3 +43,13 @@ Route::group(['prefix'=>'colors'],function(){
     Route::patch('/{color}/update', \App\Http\Controllers\Color\UpdateController::class)->name('color.update');
     Route::delete('/{color}/delete', \App\Http\Controllers\Color\DeleteController::class)->name('color.destroy');
 });
+
+Route::group(['prefix'=>'users'],function(){
+    Route::get('/', \App\Http\Controllers\User\IndexController::class)->name('user.index');
+    Route::get('/create', \App\Http\Controllers\User\CreateController::class)->name('user.create');
+    Route::post('/store', \App\Http\Controllers\User\StoreController::class)->name('user.store');
+    Route::get('/{user}/show', \App\Http\Controllers\User\ShowController::class)->name('user.show');
+    Route::get('/{user}/edit', \App\Http\Controllers\User\EditController::class)->name('user.edit');
+    Route::patch('/{user}/update', \App\Http\Controllers\User\UpdateController::class)->name('user.update');
+    Route::delete('/{user}/delete', \App\Http\Controllers\User\DeleteController::class)->name('user.destroy');
+});

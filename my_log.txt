@@ -78,3 +78,24 @@ Laravel 9 и Vue 3 SPA интернет магазин
 
 
 7. CRUD по пользователям
+    php artisan make:migration add_surname_patronymic_age_address_gender_to_users_table
+
+    docker exec -it shop_app bash
+    php artisan migrate
+
+    #users
+
+    php artisan make:controller User/IndexController --invokable
+    php artisan make:controller User/ShowController --invokable
+    php artisan make:controller User/EditController --invokable
+    php artisan make:controller User/DeleteController --invokable
+    php artisan make:controller User/UpdateController --invokable
+    php artisan make:controller User/CreateController --invokable
+    php artisan make:controller User/StoreController --invokable
+
+    php artisan make:request User/StoreRequest
+    php artisan make:request User/UpdateRequest
+    docker exec -it shop_app bash
+    php artisan migrate
+    exit
+    view crud
