@@ -99,3 +99,23 @@ Laravel 9 и Vue 3 SPA интернет магазин
     php artisan migrate
     exit
     view crud
+
+
+8. Миграция для продуктов и начальная форма для добавлнения
+    php artisan make:model Product -m
+    php artisan make:model ProductColor -m
+    php artisan make:model ProductTag -m
+    docker exec -it shop_app bash
+    php artisan migrate
+    exit
+
+    php artisan make:controller Product/IndexController --invokable
+    php artisan make:controller Product/ShowController --invokable
+    php artisan make:controller Product/EditController --invokable
+    php artisan make:controller Product/DeleteController --invokable
+    php artisan make:controller Product/UpdateController --invokable
+    php artisan make:controller Product/CreateController --invokable
+    php artisan make:controller Product/StoreController --invokable
+
+    php artisan make:request Product/StoreRequest
+    php artisan make:request Product/UpdateRequest
