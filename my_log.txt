@@ -119,3 +119,9 @@ Laravel 9 и Vue 3 SPA интернет магазин
 
     php artisan make:request Product/StoreRequest
     php artisan make:request Product/UpdateRequest
+
+
+9. Доделываем добавление продуктов в админке
+
+    php artisan storage:link  -- это делать внутри докер контейнера, иначе не будет работать
+    php artisan make:resource Product/ProductResource

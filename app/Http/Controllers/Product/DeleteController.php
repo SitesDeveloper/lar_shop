@@ -3,18 +3,16 @@
 namespace App\Http\Controllers\Product;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Product;
 
 class DeleteController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function __invoke(Request $request)
+    public function __invoke(Product $product)
     {
-        //
+        $product->tags()->detach();
+        $product->colors()->detach();
+        $product->delete();
+
+        return redirect()->route('product.index');
     }
 }

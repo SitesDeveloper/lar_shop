@@ -3,18 +3,20 @@
 namespace App\Http\Controllers\Product;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Product;
+use App\Models\Color;
+use App\Models\Tag;
+use App\Models\Category;
+
 
 class EditController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function __invoke(Request $request)
+    public function __invoke(Product $product)
     {
-        //
+        $tags = Tag::all();
+        $colors = Color::all();
+        $categories = Category::all();
+
+        return view('product.edit', compact( 'product','tags', 'colors', 'categories'));
     }
 }

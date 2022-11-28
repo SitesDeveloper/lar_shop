@@ -34,6 +34,7 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Картинка</th>
                                     <th>Наименование</th>
                                 </tr>
                                 </thead>
@@ -41,6 +42,8 @@
                                 @foreach($products as $product)
                                 <tr>
                                     <td>{{$product->id}}</td>
+                                    <td>
+                                        <img style="width: 50px; height: auto;" src="{{$product->image_url}}">
                                     <td>
                                         <a href="{{route('product.show', $product->id)}}" class="link">
                                             {{$product->title}}
