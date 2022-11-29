@@ -125,3 +125,13 @@ Laravel 9 и Vue 3 SPA интернет магазин
 
     php artisan storage:link  -- это делать внутри докер контейнера, иначе не будет работать
     php artisan make:resource Product/ProductResource
+
+
+10. Создаем проект на vue3, клиентская часть интернет магазин
+    //для шаблона был сделан другой гит и проект:
+        git@github.com:SitesDeveloper/vue_shop.git
+           npm init vue@latest   по инструкции https://vuejs.org/guide/quick-start.html#creating-a-vue-application
+11. Переносим html шаблон магазина в App vue
+
+12. Добавляем главную страницу во vue router
+13. Прокидываем шаблон продуктов и получаем продукты с бекенд
