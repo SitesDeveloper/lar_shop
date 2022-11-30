@@ -34,7 +34,7 @@ class Product extends Model
     public function getImageUrlAttribute()
     {
         return !empty($this->preview_image) ?
-            Storage::url($this->preview_image) : Storage::url('special/no_img.jpg');
+            url( Storage::url($this->preview_image) ) : url( Storage::url('special/no_img.jpg') );
     }
 
 //    public function delete()

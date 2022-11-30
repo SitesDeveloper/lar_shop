@@ -135,3 +135,7 @@ Laravel 9 и Vue 3 SPA интернет магазин
 
 12. Добавляем главную страницу во vue router
 13. Прокидываем шаблон продуктов и получаем продукты с бекенд
+
+14. Создаем Resource для продуктов и отображаем данные
+    php artisan make:resource Product/ProductResource
+    php artisan make:resource Category/CategoryResource
