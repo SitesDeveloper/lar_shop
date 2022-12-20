@@ -63,3 +63,14 @@ Route::group(['prefix'=>'products'],function(){
     Route::patch('/{product}/update', \App\Http\Controllers\Product\UpdateController::class)->name('product.update');
     Route::delete('/{product}/delete', \App\Http\Controllers\Product\DeleteController::class)->name('product.destroy');
 });
+
+Route::group(['prefix'=>'groups'],function(){
+    Route::get('/', \App\Http\Controllers\Group\IndexController::class)->name('group.index');
+    Route::get('/create', \App\Http\Controllers\Group\CreateController::class)->name('group.create');
+    Route::post('/store', \App\Http\Controllers\Group\StoreController::class)->name('group.store');
+    Route::get('/{group}/show', \App\Http\Controllers\Group\ShowController::class)->name('group.show');
+    Route::get('/{group}/edit', \App\Http\Controllers\Group\EditController::class)->name('group.edit');
+    Route::patch('/{group}/update', \App\Http\Controllers\Group\UpdateController::class)->name('group.update');
+    Route::delete('/{group}/delete', \App\Http\Controllers\Group\DeleteController::class)->name('group.destroy');
+});
+

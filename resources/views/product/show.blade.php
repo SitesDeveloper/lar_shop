@@ -86,6 +86,14 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>Группа</td>
+                                    <td>
+                                        @if ($product->group)
+                                            {{$product->group->title}} ( #{{$product->group->id}} )
+                                        @endif
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td>Тэги</td>
                                     <td>
                                         @foreach($product->tags as $tag)

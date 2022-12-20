@@ -59,6 +59,19 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Группа</label>
+                        <select name="group_id" class="form-control category select2" style="width: 100%;">
+                            <option selected="selected" disabled>Выберите группу</option>
+                            @foreach($groups as $group)
+                                <option {{ ( isset($product->group) && ($group->id == $product->group->id) ) ? ' selected' : '' }} value="{{ $group->id }}">
+                                    {{$group->title}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+
+
+                    <div class="form-group">
                         <label>Тэги</label>
                         <select  name="tags[]" class="tags select2" multiple="multiple" data-placeholder="Выберите тэги" style="width: 100%;">
                             @foreach ($tags as $tag)

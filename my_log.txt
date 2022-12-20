@@ -139,3 +139,13 @@ Laravel 9 и Vue 3 SPA интернет магазин
 14. Создаем Resource для продуктов и отображаем данные
     php artisan make:resource Product/ProductResource
     php artisan make:resource Category/CategoryResource
+
+15. Корректируем работу popup и добавляем вывод атрибутов
+
+16. Выводим варианты цветов в быстром просмотре
+    php artisan make:model Group -m
+    php artisan make:migration add_column_group_id_to_products_table
+    docker exec -it shop_app bash
+    php artisan migrate
+    exit
+    
