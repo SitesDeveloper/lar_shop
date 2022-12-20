@@ -148,4 +148,16 @@ Laravel 9 и Vue 3 SPA интернет магазин
     docker exec -it shop_app bash
     php artisan migrate
     exit
-    
+
+    php artisan make:controller Group/IndexController --invokable
+    php artisan make:controller Group/ShowController --invokable
+    php artisan make:controller Group/EditController --invokable
+    php artisan make:controller Group/DeleteController --invokable
+    php artisan make:controller Group/UpdateController --invokable
+    php artisan make:controller Group/CreateController --invokable
+    php artisan make:controller Group/StoreController --invokable
+
+    php artisan make:request Group/StoreRequest
+    php artisan make:request Group/UpdateRequest    
+
+ 17. Выбор продукта внутри попап, улучшаем отдачу продуктов    
