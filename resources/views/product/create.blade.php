@@ -93,6 +93,22 @@
                         </div>
                     </div>
 
+                    @for ($imgNum=1;  $imgNum<=3 ; $imgNum++)
+                        <div class="form-group">
+                            <label for="exampleInputFile">Доп Изображение {{$imgNum}}</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input name="product_images[]" type="file" class="custom-file-input" id="exampleInputFile{{$imgNum}}">
+                                    <label class="custom-file-label" for="exampleInputFile{{$imgNum}}">Выберите изображение</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Загрузить</span>
+                                </div>
+                            </div>
+                        </div>
+                    @endfor
+
+
 
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Создать">

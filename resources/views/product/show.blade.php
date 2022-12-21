@@ -80,6 +80,14 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>Доп Изображения</td>
+                                    <td>
+                                        @foreach ($product->productImages as $prodImage)
+                                            <img style="width: 100px; height: auto;" src="{{$prodImage->image_url}}">
+                                        @endforeach
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td>Категория</td>
                                     <td>
                                         {{$product->category->title}} ( #{{$product->category->id}} )

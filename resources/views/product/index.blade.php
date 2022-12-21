@@ -36,6 +36,8 @@
                                     <th>ID</th>
                                     <th>Картинка</th>
                                     <th>Наименование</th>
+                                    <th>Группа</th>
+                                    <th>Категория</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -44,10 +46,20 @@
                                     <td>{{$product->id}}</td>
                                     <td>
                                         <img style="width: 50px; height: auto;" src="{{$product->image_url}}">
+                                        @foreach ($product->productImages as $prodImage)
+                                            <img style="width: 50px; height: auto;" src="{{$prodImage->image_url}}">
+                                        @endforeach
+                                    </td>
                                     <td>
                                         <a href="{{route('product.show', $product->id)}}" class="link">
                                             {{$product->title}}
                                         </a>
+                                    </td>
+                                    <td>
+                                        {{$product->group->title}}
+                                    </td>
+                                    <td>
+                                        {{$product->category->title}}
                                     </td>
                                 </tr>
                                 @endforeach

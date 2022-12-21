@@ -103,7 +103,7 @@
                         <label for="exampleInputFile">Изображение
                             <img style="width: 50px; height: auto;" src="{{$product->image_url}}">
                             <br>
-                            <span>( если указано, будте заменено )</span>
+                            <span>( если указано, будет заменено )</span>
                         </label>
 
                         <div class="input-group">
@@ -116,6 +116,33 @@
                             </div>
                         </div>
                     </div>
+
+                    @for ($imgNum=1;  $imgNum<=3 ; $imgNum++)
+                        <div class="form-group">
+                            <label for="exampleInputFile">Доп Изображение {{$imgNum}}
+                                @if ($product->productImages->count()>=$imgNum)
+                                    <img style="width: 50px; height: auto;" src="{{$product->productImages[$imgNum-1]->image_url}}">
+                                    <br>
+                                    <span>( если указано, будет заменено )</span>
+                                @endif
+                                
+                            </label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input name="product_images[]" type="file" class="custom-file-input" id="exampleInputFile{{$imgNum}}">
+                                    <label class="custom-file-label" for="exampleInputFile{{$imgNum}}">Выберите изображение</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Загрузить</span>
+                                </div>
+                            </div>
+                        </div>
+                    @endfor
+
+
+
+
+
 
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Сохранить">

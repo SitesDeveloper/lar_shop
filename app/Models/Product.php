@@ -44,6 +44,12 @@ class Product extends Model
             url( Storage::url($this->preview_image) ) : url( Storage::url('special/no_img.jpg') );
     }
 
+    public function productImages() 
+    {
+        return $this->hasMany(ProductImage::class, 'product_id', 'id');
+    }
+
+
 //    public function delete()
 //    {
 //        $this->tags()->detach();
