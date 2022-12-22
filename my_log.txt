@@ -162,3 +162,9 @@ Laravel 9 и Vue 3 SPA интернет магазин
 
  17. Выбор продукта внутри попап, улучшаем отдачу продуктов    
  18. Галерея в быстром просмотре продукта
+    php artisan make:model ProductImage -m
+    docker exec -it shop_app bash
+    php artisan migrate
+    exit
+
+19. Фильтр продуктов, заготовка бека и фронт енда

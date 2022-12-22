@@ -6,6 +6,7 @@ use App\Models\Tag;
 use App\Models\Color;
 use App\Models\Group;
 use App\Models\Category;
+use App\Models\Traits\Filterable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -13,6 +14,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Product extends Model
 {
     use HasFactory;
+    use Filterable;
 
     protected $table = 'products';
     protected $guarded = false;
