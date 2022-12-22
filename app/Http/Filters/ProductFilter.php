@@ -12,6 +12,7 @@ class ProductFilter extends AbstractFilter
     const COLORS = 'colors';
     const PRICES = 'prices';
     const TAGS = 'tags';
+    const SORT = 'sort';
 
     protected function getCallbacks(): array
     {
@@ -20,6 +21,7 @@ class ProductFilter extends AbstractFilter
            self::COLORS => [$this, 'colors'],
            self::PRICES => [$this, 'prices'],
            self::TAGS => [$this, 'tags'],
+           self::SORT => [$this, 'sort'],
         ];
 
     }
@@ -48,4 +50,26 @@ class ProductFilter extends AbstractFilter
         });
     }
 
+    protected function sort( Builder $builder, $value) 
+    {
+        switch ($value) {
+            case 'alpha_az':
+                $builder->OrderBy('title', 'ASC');
+                break;
+
+            case 'alpha_za':
+                $builder->OrderBy('title', 'DESC');
+                break;
+
+            case 'price_hl':
+                $builder->OrderBy('price', 'DESC');
+                break;
+            case 'price_lh':
+                $builder->OrderBy('price', 'ASC');
+                break;
+
+            default:
+                break;    
+        }
+    }
 }
