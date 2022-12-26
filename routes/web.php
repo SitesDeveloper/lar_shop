@@ -79,4 +79,4 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 
-Route::get('{pag}', \App\Http\Controllers\Client\IndexController::class)->name('client.index');
+Route::get('{any}', \App\Http\Controllers\Client\IndexController::class)->where('any', '.*')->name('client.index');

@@ -2,7 +2,7 @@
 <div>
   <main class="overflow-hidden ">
     <!--Start Breadcrumb Style2-->
-    <div class="breadcrumb-area" style="background-image: url(src/assets/images/inner-pages/breadcum-bg.png);">
+    <div class="breadcrumb-area" style="background-image: url(assets/images/inner-pages/breadcum-bg.png);">
       <div class="container">
         <div class="row">
           <div class="col-xl-12">
@@ -29,7 +29,7 @@
             <div class="product-categories-one__inner">
               <ul>
                 <li> <a href="#0" class="img-box">
-                  <div class="inner"> <img src="/src/assets/images/shop/product-categories-v1-img1.png"
+                  <div class="inner"> <img src="/assets/images/shop/product-categories-v1-img1.png"
                                            alt="" /> </div>
                 </a>
                   <div class="title"> <a href="#0">
@@ -37,7 +37,7 @@
                   </a> </div>
                 </li>
                 <li> <a href="#0" class="img-box">
-                  <div class="inner"> <img src="/src/assets/images/shop/product-categories-v1-img2.png"
+                  <div class="inner"> <img src="/assets/images/shop/product-categories-v1-img2.png"
                                            alt="" /> </div>
                 </a>
                   <div class="title"> <a href="#0">
@@ -45,7 +45,7 @@
                   </a> </div>
                 </li>
                 <li> <a href="#0" class="img-box">
-                  <div class="inner"> <img src="/src/assets/images/shop/product-categories-v1-img3.png"
+                  <div class="inner"> <img src="/assets/images/shop/product-categories-v1-img3.png"
                                            alt="" /> </div>
                 </a>
                   <div class="title"> <a href="#0">
@@ -53,7 +53,7 @@
                   </a> </div>
                 </li>
                 <li> <a href="#0" class="img-box">
-                  <div class="inner"> <img src="/src/assets/images/shop/product-categories-v1-img4.png"
+                  <div class="inner"> <img src="/assets/images/shop/product-categories-v1-img4.png"
                                            alt="" /> </div>
                 </a>
                   <div class="title"> <a href="#0">
@@ -61,7 +61,7 @@
                   </a> </div>
                 </li>
                 <li> <a href="#0" class="img-box">
-                  <div class="inner"> <img src="/src/assets/images/shop/product-categories-v1-img5.png"
+                  <div class="inner"> <img src="/assets/images/shop/product-categories-v1-img5.png"
                                            alt="" /> </div>
                 </a>
                   <div class="title"> <a href="#0">
@@ -69,7 +69,7 @@
                   </a> </div>
                 </li>
                 <li> <a href="#0" class="img-box">
-                  <div class="inner"> <img src="/src/assets/images/shop/product-categories-v1-img6.png"
+                  <div class="inner"> <img src="/assets/images/shop/product-categories-v1-img6.png"
                                            alt="" /> </div>
                 </a>
                   <div class="title"> <a href="#0">
@@ -196,7 +196,7 @@
                           <div class="products-three-single-img">
                             <router-link :to="{name: 'products.show', params: {id:product.id}}" class="d-block">
                               <img :src="product.image_url" class="first-img" alt="" />
-                              <img src="/src/assets/images/home-three/productss2-hover-1.png" alt="" class="hover-img" />
+                              <img src="/assets/images/home-three/productss2-hover-1.png" alt="" class="hover-img" />
                             </router-link>
                             <div class="products-grid-one__badge-box"> <span
                                 class="bg_base badge new ">New</span>
@@ -297,15 +297,15 @@
                                     </div>
                                     <div class="payment-method"> 
                                       <a href="#0"> <img
-                                        src="/src/assets/images/payment_method/method_1.png"
+                                        src="/assets/images/payment_method/method_1.png"
                                         alt=""> </a>
                                       <a href="#0"> <img
-                                          src="/src/assets/images/payment_method/method_2.png"
+                                          src="/assets/images/payment_method/method_2.png"
                                           alt=""> </a> <a href="#0"> <img
-                                          src="/src/assets/images/payment_method/method_3.png"
+                                          src="/assets/images/payment_method/method_3.png"
                                           alt=""> </a>
                                       <a href="#0"> <img
-                                          src="/src/assets/images/payment_method/method_4.png"
+                                          src="/assets/images/payment_method/method_4.png"
                                           alt=""> </a> </div>
                                   </div>
                                 </div>
@@ -459,7 +459,7 @@ export default {
     },
 
     getProducts(page=1) {
-      this.axios.post('http://localhost:8876/api/products', {
+      this.axios.post('/api/products', {
         categories: this.categories,        
         colors: this.colors,
         tags: this.tags,        
@@ -477,7 +477,7 @@ export default {
           })
     },
     getProduct(id) {
-      this.axios.get(`http://localhost:8876/api/products/${id}`)
+      this.axios.get(`/api/products/${id}`)
           .then( res => {
             console.log(res);
             this.popupProduct = res.data.data;
@@ -487,7 +487,7 @@ export default {
           })
     },
     getFilterList() {
-      this.axios.get(`http://localhost:8876/api/products/filters`)
+      this.axios.get(`/api/products/filters`)
           .then( res => {
             console.log(res);
             this.filterList = res.data;
